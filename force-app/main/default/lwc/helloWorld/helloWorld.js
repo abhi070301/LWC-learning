@@ -28,4 +28,16 @@ export default class HelloWorld extends LightningElement {
     get sumNums(){
         return this.num1 + this.num2;
     }
+
+    usernames = ["Abhi", "Minu", "Ajay", "Arvind", "Nishant"];
+    fetchDetailHandler(){
+        const elem = this.template.querySelector('h1');
+        const userElements = this.template.querySelectorAll('.name');
+
+        console.log(elem.innerText);
+        Array.from(userElements).forEach(item => {
+            console.log(item.innerText);
+        });
+        
+    }
 }
