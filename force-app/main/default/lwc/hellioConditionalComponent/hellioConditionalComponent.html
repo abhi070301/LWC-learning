@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  title="Two way data binding">
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" label="Show data" title="Show data" onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button>
+            <template if:true={isVisible}>
+                <div>Welcom to LWC learner</div>
+            </template>
+
+            <template if:false={isVisible}>
+                <div>You cann't delete data please click on button !</div>
+            </template>
+
+            <lightning-input type="text" label="Type hello to see the data" onkeyup={changeHandler}>
+            </lightning-input>
+            <template lwc:if={helloMethod}>
+                <div>Hurry! You have typed correctly ! </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

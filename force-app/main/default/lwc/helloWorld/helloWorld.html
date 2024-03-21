@@ -1,0 +1,28 @@
+<template>
+        
+        <lightning-card  title="Two way data binding">
+            <div class="slds-m-around_medium"> 
+                <lightning-input type="text" 
+                label="Enter profile Name" onkeyup={changeHandler}>
+                </lightning-input>
+                <div>{fullName} is a Salesforce {title}</div>
+            </div>
+        </lightning-card>
+
+        <lightning-card  title="@track proprties">
+            <div class="slds-m-around_medium"> 
+                <lightning-input type="text" 
+                label="Enter City Name" onkeyup={trackHandler}>
+                </lightning-input>
+                <div>{address.city} is my city.</div>
+            </div>
+        </lightning-card>
+
+        <lightning-card  title="getter proprties">
+            <div class="slds-m-around_medium"> 
+                <div>User[0] -> {firstUser}</div>
+                <div>Sum of {num1} and {num2} -> {sumNums}</div>
+            </div>
+        </lightning-card>
+
+</template>
