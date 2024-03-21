@@ -32,12 +32,17 @@ export default class HelloWorld extends LightningElement {
     usernames = ["Abhi", "Minu", "Ajay", "Arvind", "Nishant"];
     fetchDetailHandler(){
         const elem = this.template.querySelector('h1');
+        elem.style.border = "1px solid red";
         const userElements = this.template.querySelectorAll('.name');
 
         console.log(elem.innerText);
         Array.from(userElements).forEach(item => {
             console.log(item.innerText);
+            item.setAttribute("title", item.innerText);
         });
         
+        //lwc:dom = "manual"
+        const childElem = this.template.querySelector('.child');
+        childElem.innerHTML = '<p>Hey I am child Element</p>';
     }
 }
