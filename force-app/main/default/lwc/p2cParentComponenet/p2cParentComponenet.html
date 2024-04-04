@@ -1,0 +1,32 @@
+<template>
+    <c-p2c-alert-child
+    message = "This message for alert..."
+    card-title ="Parent to child communication"
+    is-availble
+    number = 20
+    >
+    </c-p2c-alert-child>
+
+    <!-- non premitive Data passing-->
+    <div class="slds-m-bottom_medium"></div>
+    <c-p2c-carousel-child-component carousel-detail={carouselData}>
+    </c-p2c-carousel-child-component>
+
+    <!-- progress bar -->
+    <div class="slds-m-bottom_medium"></div>
+    <lightning-card title="Parent to child communication on action">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="number" label="Enter Percentage" onkeyup={changeHandler}></lightning-input>
+            <c-p2c-progress-component
+            progress-value = {percentange}
+            >
+                
+            </c-p2c-progress-component>
+        </div>>
+    </lightning-card>
+
+     <!-- Silder -->
+     <div class="slds-m-bottom_medium"></div>
+     <lightning-button variant="brand" label="Reset Silder"  onclick={handleClick}></lightning-button>
+     <c-p2c-slider-component></c-p2c-slider-component>
+</template>
