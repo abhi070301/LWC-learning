@@ -1,5 +1,9 @@
 import { LightningElement, wire } from 'lwc';
+<<<<<<< HEAD
 import SAMPLEMC from "@salesforce/messageChannel/SampleMessageChannel__c"
+=======
+import SAMPLEMC from "@salesforce/messageChannel/SampleMessageChennel__c"
+>>>>>>> 249669c (commit)
 import {subscribe, MessageContext, APPLICATION_SCOPE, unsubscribe} from 'lightning/messageService';
 export default class LmsComponentX extends LightningElement {
     recievedMessage
